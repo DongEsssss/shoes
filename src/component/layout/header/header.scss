@@ -1,0 +1,34 @@
+header {
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+    .header-bar {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-tool {
+            text-align: right;
+
+            .MuiOutlinedInput-root {
+                padding: 0px;
+            }
+
+            .search-field {
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 3s ease, transform 3s ease;
+                pointer-events: none;
+                display: inline-block;
+            }
+
+            .search-field.show {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+        }
+    }
+}
