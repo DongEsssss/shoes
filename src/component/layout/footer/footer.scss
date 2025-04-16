@@ -42,10 +42,15 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         align-items: center;
-        justify-items: center
-    }
+        justify-items: center;
 
-    ;
+        .social-text {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+        }
+    }
 
     .footer-social a img {
         width: 24px;

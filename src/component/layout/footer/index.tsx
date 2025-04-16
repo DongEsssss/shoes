@@ -20,14 +20,14 @@ export default function Footer() {
                     <p>운영시간: 평일 10:00 - 17:00</p>
                 </div>
                 <div className="footer-social">
-                    <a href="#">
-                        <KakaoIcon />
+                    <a href="#" className="social-text">
+                        <KakaoIcon /> Kakao Talk
                     </a>
-                    <a href="#">
-                        <InstagramIcon />
+                    <a href="#" className="social-text">
+                        <InstagramIcon /> Instagram
                     </a>
-                    <a href="#">
-                        <YoutubeIcon />
+                    <a href="#" className="social-text">
+                        <YoutubeIcon /> Youtube
                     </a>
                 </div>
             </div>
