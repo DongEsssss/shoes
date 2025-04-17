@@ -30,7 +30,6 @@ export default function Header() {
                         >
                             <TextField
                                 fullWidth
-                                autoFocus
                                 size="small"
                                 placeholder="검색어를 입력하세요"
                                 variant="outlined"
