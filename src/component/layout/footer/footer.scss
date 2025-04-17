@@ -1,10 +1,23 @@
 .site-footer {
     background-color: #111;
-    color: #eee;
-    padding: 40px 20px;
+    color: #e3e3e3;
+    padding-top: 0;
     font-size: 14px;
     line-height: 1.6;
     font-family: 'Noto Sans KR', sans-serif;
+
+    .footer-top {
+        background-color: #f9f9f9;
+        padding: 20px 10px;
+
+        .footer-top-slogan {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+    }
 
     a {
         color: #bbb;
@@ -16,10 +29,11 @@
         }
     }
 
-    .footer-top {
+    .footer-middle {
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
+        padding: 20px 10px;
         grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
         gap: 32px;
         margin-bottom: 30px;
@@ -75,14 +89,14 @@
     }
 
     @media screen and (max-Width:950px) {
-        .footer-top {
+        .footer-middle {
             grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
         }
     }
 
 
     @media (max-width: 768px) {
-        .footer-top {
+        .footer-middle {
             grid-template-columns: 1fr;
         }
     }

@@ -1,13 +1,35 @@
+import { Button, Typography } from "@mui/material";
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+
 import { ReactComponent as KakaoIcon } from "../../../asset/svg/kakao.svg";
 import { ReactComponent as InstagramIcon } from "../../../asset/svg/instagram.svg";
 import { ReactComponent as YoutubeIcon } from "../../../asset/svg/youtube.svg";
-import './footer.scss'
-import { Typography } from "@mui/material";
 
+import './footer.scss'
 export default function Footer() {
     return (
         <footer className="site-footer">
             <div className="footer-top">
+                <div className="footer-top-slogan">
+                    <Typography variant="body1">
+                        통합고객센터
+                        1588-9667
+                        월~금 09:00 ~ 12:00 / 13:00 ~ 18:00
+                        (공휴일 휴무)
+                    </Typography>
+                    <Button sx={{
+                        display: 'flex',
+                        gap: '5px',
+                        backgroundColor: 'white',
+                        border: '1px solid #ececec',
+                        color: "black",
+                        marginLeft: '20px'
+                    }}>
+                        챗봇 상담  <SmartToyIcon sx={{ color: 'black' }} />
+                    </Button>
+                </div>
+            </div>
+            <div className="footer-middle">
                 <Typography variant="h4" className="footer-slogan">당신의 발걸음을 더 가볍게, 매일이 런웨이처럼.</Typography>
                 <div className="footer-links">
                     <a href="/faq">자주 묻는 질문</a>
