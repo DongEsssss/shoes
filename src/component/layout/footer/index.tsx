@@ -11,7 +11,7 @@ export default function Footer() {
         <footer className="site-footer">
             <div className="footer-top">
                 <div className="footer-top-slogan">
-                    <Typography variant="body1">
+                    <Typography variant="body2">
                         통합고객센터
                         1588-9667
                         월~금 09:00 ~ 12:00 / 13:00 ~ 18:00

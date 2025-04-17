@@ -1,0 +1,69 @@
+{
+    "distributors": [
+        {
+            "name": "Nike",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
+            "link": "https://www.nike.com/"
+        },
+        {
+            "name": "Adidas",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg",
+            "link": "https://www.adidas.com/"
+        },
+        {
+            "name": "Puma",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Puma-logo-%28text%29.svg",
+            "link": "https://www.puma.com/"
+        },
+        {
+            "name": "Reebok",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/5/53/Reebok_2019_logo.svg",
+            "link": "https://www.reebok.com/"
+        },
+        {
+            "name": "New Balance",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/New_Balance_logo.svg",
+            "link": "https://www.newbalance.com/"
+        },
+        {
+            "name": "Under Armour",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/4/44/Under_armour_logo.svg",
+            "link": "https://www.underarmour.com/"
+        },
+        {
+            "name": "Asics",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Asics_Logo.svg",
+            "link": "https://www.asics.com/"
+        },
+        {
+            "name": "Vans",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/9/91/Vans-logo.svg",
+            "link": "https://www.vans.com/"
+        },
+        {
+            "name": "Converse",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/Converse_logo.svg",
+            "link": "https://www.converse.com/"
+        },
+        {
+            "name": "Jordan Brand",
+            "logo": "https://en.wikipedia.org/wiki/Jumpman_%28logo%29#/media/File:Jumpman_logo.svg",
+            "link": "https://www.nike.com/jordan"
+        },
+        {
+            "name": "Skechers",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/SKECHERS_logo.png",
+            "link": "https://www.skechers.com/"
+        },
+        {
+            "name": "Fila",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Fila_logo.svg",
+            "link": "https://www.fila.com/"
+        },
+        {
+            "name": "Nike SB",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Nike_SB_logo.svg",
+            "link": "https://www.nike.com/w/sb"
+        }
+    ]
+}
