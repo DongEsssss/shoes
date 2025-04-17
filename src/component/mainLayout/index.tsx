@@ -1,6 +1,6 @@
 
-import Header from '../header';
-import Footer from '../footer';
+import Header from '../layout/header';
+import Footer from '../layout/footer';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
@@ -14,9 +14,9 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
             }}
         >
             <Header />
-            <Container component="main" sx={{ flex: 1, py: 4 }}>
+            <div style={{ flex: 1, padding: 0 }}>
                 {children}
-            </Container>
+            </div>
             <Footer />
         </Box>
     );
