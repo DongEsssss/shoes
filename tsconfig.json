@@ -26,7 +26,21 @@
     "typeRoots": [
       "./src/types",
       "./node_modules/@types"
-    ]
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ]
+    },
+    "strictFunctionTypes": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./build/tsconfig.tsbuildinfo"
   },
   "include": [
     "src"
