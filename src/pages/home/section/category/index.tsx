@@ -32,7 +32,7 @@ export default function Category() {
                     1024: { slidesPerView: 6 },
                     1280: { slidesPerView: 7 },
                 }}
-                style={{ padding: '0px 50px' }}
+                style={{ padding: '0px 0px' }}
             >
                 {category.category.map((item: CategoryType) => (
                     <SwiperSlide key={item.key}>
