@@ -7,14 +7,14 @@
 .carousel-track {
     display: flex;
     width: max-content;
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 50s linear infinite;
 }
 
 .carousel-slide {
     flex: 0 0 auto;
-    width: 160px;
-    height: 100px;
-    background-color: #eee;
+    width: 230px;
+    height: 120px;
+    background-color: #f5f5f5;
     border-radius: 8px;
     display: flex;
     justify-content: center;
