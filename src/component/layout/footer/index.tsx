@@ -58,7 +58,7 @@ export default function Footer() {
                     © 2025 Starlight Shoes. All rights reserved.
                 </Typography>
                 <Typography variant="body2">
-                    본 웹사이트의 디자인, 코드, 이미지 등의 모든 콘텐츠는 Star Shoes의 자산이며, 사전 허가 없이 무단 복제, 배포, 사용을 금합니다.
+                    본 웹사이트의 디자인, 코드, 이미지 등의 모든 콘텐츠는 DongEsssss의 자산이며, 사전 허가 없이 무단 복제, 배포, 사용을 금합니다.
                 </Typography>
             </div>
         </footer>

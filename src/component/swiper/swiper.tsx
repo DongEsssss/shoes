@@ -25,7 +25,6 @@ export default function SwiperComponent() {
             autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,
-
             }}
             style={{ width: '100%', height: '100%' }}
             className="mySwiper"

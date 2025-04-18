@@ -1,12 +1,13 @@
-import { Box, Typography } from '@mui/material';
-import category from "../../../../asset/data/category.json";
 import { useNavigate } from 'react-router-dom';
+import { Box, Typography } from '@mui/material';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import './category.scss'
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+import category from "../../../../asset/data/category.json";
 export interface CategoryType {
     key: number;
     name: string;
@@ -18,7 +19,7 @@ export default function Category() {
     const navigate = useNavigate();
 
     return (
-        <main>
+        <main className='category-main-section'>
             <Swiper
                 modules={[Navigation]}
                 navigation
@@ -31,7 +32,7 @@ export default function Category() {
                     1024: { slidesPerView: 6 },
                     1280: { slidesPerView: 7 },
                 }}
-                style={{ padding: '20px' }}
+                style={{ padding: '0px 50px' }}
             >
                 {category.category.map((item: CategoryType) => (
                     <SwiperSlide key={item.key}>
