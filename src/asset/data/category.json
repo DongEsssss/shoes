@@ -1,0 +1,72 @@
+{
+    "category": [
+        {
+            "key": 1,
+            "name": "운동화",
+            "image": "/svg/runnungshoe.svg",
+            "link": ""
+        },
+        {
+            "key": 2,
+            "name": "스니커즈",
+            "image": "/svg/skinners.svg",
+            "link": ""
+        },
+        {
+            "key": 3,
+            "name": "캔버스화",
+            "image": "/svg/basketball_shoe.svg",
+            "link": ""
+        },
+        {
+            "key": 4,
+            "name": "구두",
+            "image": "/svg/dresssshoe.svg",
+            "link": ""
+        },
+        {
+            "key": 5,
+            "name": "워커",
+            "image": "/svg/boots.svg",
+            "link": ""
+        },
+        {
+            "key": 6,
+            "name": "축구화",
+            "image": "/svg/soccer.svg",
+            "link": ""
+        },
+        {
+            "key": 7,
+            "name": "농구화",
+            "image": "/svg/basketball_shoe.svg",
+            "link": ""
+        },
+        {
+            "key": 8,
+            "name": "키즈",
+            "image": "/svg/basketball_shoe.svg",
+            "link": ""
+        }
+    ],
+    "maincategory": [
+        {
+            "key": 1,
+            "name": "이 달의 추천템",
+            "image": "/svg/this_month_best.svg",
+            "link": ""
+        },
+        {
+            "key": 2,
+            "name": "이 달의 신상 아이템",
+            "image": "/svg/april_new_item.svg",
+            "link": ""
+        },
+        {
+            "key": 2,
+            "name": "이 달의 신상 아이템",
+            "image": "/svg/this_month_best.svg",
+            "link": ""
+        }
+    ]
+}

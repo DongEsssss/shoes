@@ -22,7 +22,7 @@
         },
         {
             "name": "New Balance",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/New_Balance_logo.svg",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/New_Balance_logo.svg/300px-New_Balance_logo.svg.png",
             "link": "https://www.newbalance.com/"
         },
         {
@@ -44,11 +44,6 @@
             "name": "Converse",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/Converse_logo.svg",
             "link": "https://www.converse.com/"
-        },
-        {
-            "name": "Jordan Brand",
-            "logo": "https://en.wikipedia.org/wiki/Jumpman_%28logo%29#/media/File:Jumpman_logo.svg",
-            "link": "https://www.nike.com/jordan"
         },
         {
             "name": "Skechers",
