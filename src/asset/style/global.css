@@ -11,3 +11,20 @@ body {
     flex-direction: column;
     min-height: 100%;
 }
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* swiper  */
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #e3e3e3;
+}
