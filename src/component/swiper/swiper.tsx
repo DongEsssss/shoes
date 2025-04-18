@@ -19,7 +19,7 @@ export default function SwiperComponent() {
             spaceBetween={0}
             slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
+            // pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             loop={true}
             autoplay={{
