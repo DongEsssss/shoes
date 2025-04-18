@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="80" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="300" height="80" rx="12" ry="12" fill="#E1FFF1" />
+  <!-- Heart icon -->
+  <g transform="translate(20,25)" fill="#333">
+    <path d="M10 15 
+             C 10 5, 30 5, 30 15
+             C 30 30, 15 40, 15 40
+             C 15 40, 0 30, 0 15 Z"/>
+  </g>
+  <!-- Text -->
+  <text x="80" y="50" font-family="sans-serif" font-size="24" fill="#333">이 달의 추천템</text>
+</svg>
