@@ -1,7 +1,6 @@
 
 import Header from '../layout/header';
 import Footer from '../layout/footer';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
