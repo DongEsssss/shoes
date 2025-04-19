@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 // image
-import shoes1 from '/Users/kitworks/Desktop/dongesssss/shoes/src/asset/image/shose1.png';
+import shoes1 from '../../asset/image/shose1.png';
 import shoes2 from '../../asset/image/shose2.png';
 import shoes3 from '../../asset/image/shose3.png';
 import shoes4 from '../../asset/image/shose4.png';
