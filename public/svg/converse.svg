@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 하이탑 실루엣 -->
+  <path d="M6 30 V18 L20 12 H34 L38 18 L44 30 H6 Z" stroke="#000" fill="none" stroke-width="2"/>
+  
+  <!-- 각진 고무 앞코 (완전 직선형) -->
+  <path d="M6 30 L36 30 L36 32 L6 32 Z" stroke="#000" fill="none" stroke-width="2"/>
+  
+  <!-- 각진 밑창 -->
+  <path d="M6 30 L44 30 L44 32 L6 32 Z" stroke="#000" fill="none" stroke-width="2"/>
+  
+  <!-- 로고 부분 (직사각형) -->
+  <rect x="24" y="16" width="4" height="4" rx="2" stroke="#000" stroke-width="2" fill="none"/>
+  
+  <!-- 끈 구멍 -->
+  <circle cx="18" cy="20" r="0.8" fill="#000"/>
+  <circle cx="18" cy="24" r="0.8" fill="#000"/>
+  <circle cx="18" cy="28" r="0.8" fill="#000"/>
+</svg>
