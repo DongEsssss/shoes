@@ -16,6 +16,20 @@
             color: black;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+
+            .info {
+                display: flex;
+                align-items: center;
+            }
+
+            .notice {
+                display: flex;
+                gap: 5px;
+                font-size: 14px;
+                color: black;
+
+            }
         }
     }
 
@@ -89,6 +103,10 @@
     }
 
     @media screen and (max-Width:950px) {
+        .footer-top-slogan {
+            display: grid !important;
+        }
+
         .footer-middle {
             grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
         }

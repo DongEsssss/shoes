@@ -5,28 +5,54 @@ import { ReactComponent as KakaoIcon } from "../../../asset/svg/kakao.svg";
 import { ReactComponent as InstagramIcon } from "../../../asset/svg/instagram.svg";
 import { ReactComponent as YoutubeIcon } from "../../../asset/svg/youtube.svg";
 
+import noticeData from '../../../asset/data/notice.json';
+
 import './footer.scss'
+import { useEffect, useState } from "react";
 export default function Footer() {
+    const links: string[] = noticeData.map((item) => item.title); // 공지사항 제목을 링크로 사용
+    const [currentLink, setCurrentLink] = useState<number>(0);
+    const [direction, setDirection] = useState<'up' | 'down'>('down'); // 애니메이션 방향
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setDirection('down'); // 20초마다 아래로 내려가는 애니메이션
+            setCurrentLink((prev) => (prev + 1) % links.length);
+        }, 20000); // 20초마다 실행
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
         <footer className="site-footer">
             <div className="footer-top">
                 <div className="footer-top-slogan">
-                    <Typography variant="body2">
-                        통합고객센터
-                        1588-9667
-                        월~금 09:00 ~ 12:00 / 13:00 ~ 18:00
-                        (공휴일 휴무)
-                    </Typography>
-                    <Button sx={{
-                        display: 'flex',
-                        gap: '5px',
-                        backgroundColor: 'white',
-                        border: '1px solid #ececec',
-                        color: "black",
-                        marginLeft: '20px'
-                    }}>
-                        챗봇 상담  <SmartToyIcon sx={{ color: 'black' }} />
-                    </Button>
+                    <div className="info">
+                        <Typography variant="body2">
+                            통합고객센터
+                            1588-9667
+                            월~금 09:00 ~ 12:00 / 13:00 ~ 18:00
+                            (공휴일 휴무)
+                        </Typography>
+                        <Button sx={{
+                            display: 'flex',
+                            gap: '5px',
+                            backgroundColor: 'white',
+                            border: '1px solid #ececec',
+                            color: "black",
+                            marginLeft: '20px'
+                        }}>
+                            챗봇 상담  <SmartToyIcon sx={{ color: 'black' }} />
+                        </Button>
+                    </div>
+                    <div className="notice">
+                        <div className="link-bar">
+                            <div className={`link-item ${direction}`}>{links[currentLink]}</div>
+                        </div>
+                        <Typography variant="body2">
+                            <span className="notice-text">more +</span>
+                        </Typography>
+                    </div>
                 </div>
             </div>
             <div className="footer-middle">
