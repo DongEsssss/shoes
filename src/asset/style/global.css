@@ -17,15 +17,3 @@ main {
     margin: auto;
     padding: 20px 0px;
 }
-
-
-/* swiper  */
-.swiper-button-prev,
-.swiper-button-next {
-    color: white;
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    color: #e3e3e3;
-}
