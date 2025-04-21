@@ -5,15 +5,19 @@ import CloseIcon from '@mui/icons-material/Close';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import './header.scss';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
     const [searchField, setSearchField] = useState(false);
     const searchRef = useRef<HTMLDivElement>(null);
+    const navigate = useNavigate();
 
     return (
         <header>
             <div className="header-bar">
-                <Typography variant='h5'>
+                <Typography variant='h5'
+                    onClick={() => navigate('/')}
+                >
                     Starlight Shoes
                 </Typography>
                 <div className="header-tool">
