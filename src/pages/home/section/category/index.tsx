@@ -3,11 +3,13 @@ import { Box, Typography } from '@mui/material';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import './category.scss'
+
+import './category.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import category from "../../../../asset/data/category.json";
+
 export interface CategoryType {
     key: number;
     name: string;
@@ -19,20 +21,33 @@ export default function Category() {
     const navigate = useNavigate();
 
     return (
-        <main className='category-main-section'>
+        <main className="category-main-section">
+            {/* 왼쪽 네모 박스 + 화살표 */}
+            <div className="custom-nav-wrapper left">
+                <div className="custom-swiper-button-prev">‹</div>
+            </div>
+
+            {/* 슬라이드 */}
             <Swiper
                 modules={[Navigation]}
-                navigation
+                navigation={{
+                    nextEl: '.custom-swiper-button-next',
+                    prevEl: '.custom-swiper-button-prev',
+                }}
                 loop={true}
                 spaceBetween={20}
                 breakpoints={{
                     320: { slidesPerView: 3 },
                     480: { slidesPerView: 4 },
                     768: { slidesPerView: 5 },
-                    1024: { slidesPerView: 6 },
-                    1280: { slidesPerView: 7 },
+                    1024: { slidesPerView: 5 },
+                    1280: { slidesPerView: 6 },
                 }}
-                style={{ padding: '0px 0px' }}
+                style={{
+                    padding: '0 60px', // 네모 박스 공간 확보
+                    boxSizing: 'border-box',
+                    position: 'relative'
+                }}
             >
                 {category.category.map((item: CategoryType) => (
                     <SwiperSlide key={item.key}>
@@ -64,6 +79,11 @@ export default function Category() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+
+            {/* 오른쪽 네모 박스 + 화살표 */}
+            <div className="custom-nav-wrapper right">
+                <div className="custom-swiper-button-next">›</div>
+            </div>
         </main>
     );
 }
