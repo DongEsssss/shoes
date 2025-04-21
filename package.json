@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^22.14.1",
     "eslint": "^8.57.1"
   }
