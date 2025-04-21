@@ -24,11 +24,27 @@
             }
 
             .notice {
+                width: 300px;
                 display: flex;
+                justify-content: flex-end;
+                align-items: center;
                 gap: 5px;
                 font-size: 14px;
                 color: black;
 
+                .notice-link {
+                    max-width: 300px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    margin-right: 20px;
+
+                    &:hover {
+                        color: #a1a1a1;
+                    }
+                }
             }
         }
     }
