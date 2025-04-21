@@ -1,4 +1,5 @@
 .category-main-section {
+    margin-top: 30px;
     position: relative;
 
     .custom-nav-wrapper {
@@ -11,6 +12,7 @@
         align-items: center;
         justify-content: center;
         z-index: 5;
+
 
         &.left {
             left: 0;
@@ -28,15 +30,26 @@
             align-items: center;
             justify-content: center;
             font-size: 24px;
-            background-color: #f0f0f0;
+            background-color: black;
             border-radius: 6px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             user-select: none;
+            color: black;
 
             &:hover {
                 background-color: #e0e0e0;
             }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: black;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            color: #e3e3e3;
         }
     }
 }

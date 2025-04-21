@@ -1,14 +1,15 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-
-import './category.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import category from "../../../../asset/data/category.json";
+import category from '../../../../asset/data/category.json';
+
+import './category.scss';
+import CustomNavigation from 'component/swiper/CustomNavigation';
 
 export interface CategoryType {
     key: number;
@@ -21,18 +22,14 @@ export default function Category() {
     const navigate = useNavigate();
 
     return (
-        <main className="category-main-section">
-            {/* 왼쪽 네모 박스 + 화살표 */}
-            <div className="custom-nav-wrapper left">
-                <div className="custom-swiper-button-prev">‹</div>
-            </div>
+        <main className="category-main-section" style={{ position: 'relative' }}>
+            <CustomNavigation uniqueClass="category" />
 
-            {/* 슬라이드 */}
             <Swiper
                 modules={[Navigation]}
                 navigation={{
-                    nextEl: '.custom-swiper-button-next',
-                    prevEl: '.custom-swiper-button-prev',
+                    nextEl: '.category-next',
+                    prevEl: '.category-prev',
                 }}
                 loop={true}
                 spaceBetween={20}
@@ -43,11 +40,7 @@ export default function Category() {
                     1024: { slidesPerView: 5 },
                     1280: { slidesPerView: 6 },
                 }}
-                style={{
-                    padding: '0 60px', // 네모 박스 공간 확보
-                    boxSizing: 'border-box',
-                    position: 'relative'
-                }}
+                style={{ padding: '0 60px', boxSizing: 'border-box' }}
             >
                 {category.category.map((item: CategoryType) => (
                     <SwiperSlide key={item.key}>
@@ -79,11 +72,6 @@ export default function Category() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-
-            {/* 오른쪽 네모 박스 + 화살표 */}
-            <div className="custom-nav-wrapper right">
-                <div className="custom-swiper-button-next">›</div>
-            </div>
         </main>
     );
 }
