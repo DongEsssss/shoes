@@ -1,0 +1,22 @@
+.limited-edition-section {
+    .limited-nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .limited-nav-wrapper {
+            background-color: #e3e3e3;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            .limited-swiper-button-prev,
+            .limited-swiper-button-next {
+                font-size: 32px;
+            }
+        }
+    }
+}
