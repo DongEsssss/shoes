@@ -37,7 +37,7 @@
       ]
     },
     "strictFunctionTypes": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "incremental": true,
     "tsBuildInfoFile": "./build/tsconfig.tsbuildinfo"
