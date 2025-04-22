@@ -34,11 +34,15 @@ const SliderComponent: React.FC = () => {
             .catch((error) => console.error('데이터 확인 요망 : ', error));
     }, []);
 
+    console.log(limitedEdition);
     return (
         <main className="limited-edition-section">
             <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Typography fontSize={30} fontWeight={700} color="#000" textAlign="left" marginTop={3} marginBottom={1}>
                     Limited Edition Promotion
+                    <Typography fontSize={16} color="#666" marginTop={0}>
+                        지금 가장 주목받는 한정판 컬렉션!
+                    </Typography>
                 </Typography>
                 <div className="limited-nav">
                     <div className="limited-nav-wrapper left">
@@ -57,7 +61,7 @@ const SliderComponent: React.FC = () => {
                     1200: {
                         slidesPerView: 3,
                     },
-                    768: {
+                    600: {
                         slidesPerView: 2,
                     },
                     0: {

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Mainslider from './mainslider';
 import Company from './section/company/company';
 import Caterogy from './section/category';
-import MonthNewItem from './section/monthnewitem';
+// import MonthNewItem from './section/monthnewitem';
 import MonthBestItem from './section/monthbest';
 import LimitedEdition from "./section/limitedition";
 
