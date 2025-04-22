@@ -112,10 +112,13 @@ export default function MonthBestItem() {
                                     ))}
                                 </div>
                                 <div className="sellandetail">
-                                    <Button variant="contained" sx={{ backgroundColor: '#000', color: '#fff', borderRadius: '8px' }}>
+                                    <Button variant="contained" sx={{ backgroundColor: '#000', color: '#fff', borderRadius: '8px', width: '82px', height: '36px', }}>
                                         구매하기
                                     </Button>
-                                    <Button variant='outlined' sx={{ color: '#000', borderColor: '#000', borderRadius: '8px', marginLeft: 1, padding: "4.5px" }}>
+                                    <Button variant='outlined' sx={{
+                                        color: '#000', borderColor: '#000', borderRadius: '8px', padding: "6px 16px",
+                                        width: '82px', height: '36px',
+                                    }}>
                                         <AddIcon sx={{ fontSize: '16px' }} />
                                     </Button>
                                 </div>
