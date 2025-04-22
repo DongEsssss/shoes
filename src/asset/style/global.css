@@ -17,3 +17,10 @@ main {
     margin: auto;
     padding: 20px 0px;
 }
+
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 20px 10px;
+    }
+}

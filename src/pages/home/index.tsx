@@ -23,15 +23,19 @@ export default function Home() {
                 data-aos-anchor-placement="top-bottom">
                 <Caterogy />
             </div>
-            <div data-aos="fade-up"
-                data-aos-anchor-placement="center-center">
+            <div data-aos="fade-left"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-offset="200"
+            >
                 <LimitedEdition />
             </div>
-            {/* <div data-aos="fade-right"
-                data-aos-anchor-placement="center-center">
+            <div data-aos="fade-right"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-offset="200"
+            >
                 <MonthBestItem />
             </div>
-            <div data-aos="fade-left"
+            {/* <div data-aos="fade-left"
                 data-aos-anchor-placement="center-center">
                 <MonthNewItem />
             </div> */}
