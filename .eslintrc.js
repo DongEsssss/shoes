@@ -32,6 +32,7 @@ module.exports = {
     rules: {
         'jsx-a11y/anchor-is-valid': 'off', // <a href="#"> 사용 허용
         'react/react-in-jsx-scope': 'off', // Next.js 쓸 경우 필수
+        "react/no-unescaped-entities": "off", // JSX에서 ' 사용 허용
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
     },
