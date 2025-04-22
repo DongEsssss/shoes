@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, Typography } from '@mui/material';
-
+import AddIcon from '@mui/icons-material/Add';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import './monthbest.scss';
@@ -112,11 +112,11 @@ export default function MonthBestItem() {
                                     ))}
                                 </div>
                                 <div className="sellandetail">
-                                    <Button>
+                                    <Button variant="contained" sx={{ backgroundColor: '#000', color: '#fff', borderRadius: '8px' }}>
                                         구매하기
                                     </Button>
-                                    <Button>
-                                        +
+                                    <Button variant='outlined' sx={{ color: '#000', borderColor: '#000', borderRadius: '8px', marginLeft: 1, padding: "4.5px" }}>
+                                        <AddIcon sx={{ fontSize: '16px' }} />
                                     </Button>
                                 </div>
                             </div>
