@@ -3,49 +3,49 @@
         {
             "key": 1,
             "name": "운동화",
-            "image": "/svg/runnungshoe.svg",
+            "image": "/category/운동화.png",
             "link": ""
         },
         {
             "key": 2,
             "name": "스니커즈",
-            "image": "/svg/skinners.svg",
+            "image": "/category/스니커즈.png",
             "link": ""
         },
         {
             "key": 3,
             "name": "캔버스화",
-            "image": "/svg/converse.svg",
+            "image": "/category/캔버스화.png",
             "link": ""
         },
         {
             "key": 4,
             "name": "구두",
-            "image": "/svg/dresssshoe.svg",
+            "image": "/category/구두.png",
             "link": ""
         },
         {
             "key": 5,
             "name": "워커",
-            "image": "/svg/boots.svg",
+            "image": "/category/워커.png",
             "link": ""
         },
         {
             "key": 6,
             "name": "축구화",
-            "image": "/svg/soccer.svg",
+            "image": "/category/축구화.png",
             "link": ""
         },
         {
             "key": 7,
             "name": "농구화",
-            "image": "/svg/basketball_shoe.svg",
+            "image": "/category/농구화.png",
             "link": ""
         },
         {
             "key": 8,
             "name": "키즈",
-            "image": "/svg/basketball_shoe.svg",
+            "image": "/category/아가신발.png",
             "link": ""
         }
     ],
