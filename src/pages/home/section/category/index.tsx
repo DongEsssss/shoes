@@ -58,14 +58,14 @@ export default function Category() {
                                 height: '70px',
                             }}
                         >
-                            <div className="icon" style={{ marginBottom: '8px' }}>
+                            <div className="icon">
                                 <img
                                     src={item.image}
                                     alt={`${item.name} 아이콘`}
                                     style={{ width: '64px', height: '64px', objectFit: 'contain' }}
                                 />
                             </div>
-                            <Typography sx={{ textAlign: 'center', fontSize: '14px', fontWeight: 500 }}>
+                            <Typography sx={{ textAlign: 'center', fontSize: '14px', fontWeight: 600 }}>
                                 {item.name}
                             </Typography>
                         </Box>
