@@ -1,0 +1,163 @@
+[
+    {
+        "name": "캔버스 프로모션",
+        "productCode": "스니커002",
+        "category": "캔버스",
+        "description": "캔버스 스타일의 트렌디한 신발입니다. 일상 및 활동에 적합합니다.",
+        "price": 117034,
+        "set": [
+            {
+                "name": "백팩",
+                "productCode": "백팩001",
+                "category": "가방",
+                "description": "다양한 수납공간과 편안한 착용감을 제공하는 백팩입니다.",
+                "price": 120000,
+                "image": "/model/컨버스가방.jpg"
+            },
+            {
+                "name": "키링",
+                "productCode": "키링001",
+                "category": "키링",
+                "description": "가벼운 무게와 다양한 디자인으로 실용적인 키링입니다.",
+                "price": 5000,
+                "image": "/model/컨버스키링.png"
+            },
+            {
+                "name": "텀블러",
+                "productCode": "텀블러001",
+                "category": "텀블러",
+                "description": "가벼운 무게와 다양한 디자인으로 실용적인 텀블러입니다.",
+                "price": 5000,
+                "image": "/model/컨버스텀블러.jpeg"
+            }
+        ],
+        "features": [
+            "도시적 스타일",
+            "가벼운 무게",
+            "내구성 강함"
+        ],
+        "image": "/model/캔버스모델.png",
+        "detailDescription": "이 캔버스는 트렌디한 디자인과 편안한 착화감을 동시에 제공하여 일상생활에 완벽하게 어울립니다. 다양한 스타일링에 활용 가능하며, 가볍고 내구성이 뛰어난 소재로 제작되었습니다.",
+        "promotion": "지금만 만나볼 수 있는 한정판! 스타일과 기능을 모두 갖춘 캔버스, 놓치지 마세요!"
+    },
+    {
+        "name": "어반 레더 워커",
+        "productCode": "워커001",
+        "category": "워커",
+        "description": "어반 감성의 프리미엄 가죽 워커입니다. 스타일과 기능을 동시에 만족시킵니다.",
+        "price": 158000,
+        "gender": "여성",
+        "set": [
+            {
+                "name": "가죽 크로스백",
+                "productCode": "가방002",
+                "category": "가방",
+                "description": "작지만 실용적인 크로스백으로 데일리 아이템으로 적합합니다.",
+                "price": 89000,
+                "image": "/model/가죽가방.jpeg"
+            },
+            {
+                "name": "워머 삭스",
+                "productCode": "양말001",
+                "category": "양말",
+                "description": "추운 날씨에 따뜻하게 발을 감싸주는 두꺼운 워머 양말입니다.",
+                "price": 12000,
+                "image": "/model/워머삭스.jpeg"
+            },
+            {
+                "name": "가죽 벨트",
+                "productCode": "벨트001",
+                "category": "패션잡화",
+                "description": "클래식한 디자인의 천연가죽 벨트입니다.",
+                "price": 45000,
+                "image": "/model/가죽벨트.jpg"
+            }
+        ],
+        "features": [
+            "프리미엄 천연 가죽",
+            "슬립 방지 아웃솔",
+            "트렌디한 도시적 디자인"
+        ],
+        "image": "/model/워커모델.png",
+        "detailDescription": "고급 가죽 소재로 제작되어 세련된 룩을 완성해주며, 다양한 스타일링에 매치할 수 있는 만능 아이템입니다. 발목을 감싸주는 구조로 착용감이 우수하고 활동성도 뛰어납니다.",
+        "promotion": "도시를 걷는 스타일, 어반 워커! 지금 한정 수량으로 만나보세요."
+    },
+    {
+        "name": "스피드 킥 축구화",
+        "productCode": "축구001",
+        "category": "축구화",
+        "description": "경기력 향상을 위한 초경량 기능성 축구화입니다.",
+        "price": 132000,
+        "gender": "남성",
+        "set": [
+            {
+                "name": "축구공",
+                "productCode": "볼001",
+                "category": "스포츠용품",
+                "description": "공식 규격의 내구성 강한 축구공입니다.",
+                "price": 40000
+            },
+            {
+                "name": "축구 스타킹",
+                "productCode": "양말002",
+                "category": "스포츠웨어",
+                "description": "탄력과 통기성이 우수한 축구 전용 스타킹입니다.",
+                "price": 15000
+            },
+            {
+                "name": "슈즈백",
+                "productCode": "가방003",
+                "category": "가방",
+                "description": "축구화를 안전하게 보관할 수 있는 방수 슈즈백입니다.",
+                "price": 18000
+            }
+        ],
+        "features": [
+            "초경량 소재",
+            "발목 지지 설계",
+            "강력한 접지력"
+        ],
+        "image": "/image/soccer1.png",
+        "detailDescription": "고성능 경기용 축구화로, 빠른 움직임과 강한 슛에 최적화된 디자인입니다. 발목을 안정적으로 고정시켜 부상 위험을 줄여줍니다.",
+        "promotion": "지금 바로 필드 위 주인공이 되어보세요! 성능과 스타일을 모두 잡은 축구화 한정판매!"
+    },
+    {
+        "name": "에어플로우 러닝화",
+        "productCode": "러닝001",
+        "category": "러닝화",
+        "description": "장거리 러닝에 최적화된 통기성과 쿠션감의 러닝화입니다.",
+        "price": 125000,
+        "gender": "남성",
+        "set": [
+            {
+                "name": "스포츠 헤드밴드",
+                "productCode": "액세서리001",
+                "category": "스포츠잡화",
+                "description": "러닝 중 땀을 흡수해주는 기능성 헤드밴드입니다.",
+                "price": 8000
+            },
+            {
+                "name": "흡습 티셔츠",
+                "productCode": "의류001",
+                "category": "스포츠웨어",
+                "description": "빠르게 건조되는 기능성 원단의 러닝용 티셔츠입니다.",
+                "price": 29000
+            },
+            {
+                "name": "러닝 조거팬츠",
+                "productCode": "의류002",
+                "category": "스포츠웨어",
+                "description": "가벼우면서도 활동성을 높여주는 조거 스타일 팬츠입니다.",
+                "price": 41000
+            }
+        ],
+        "features": [
+            "에어 쿠션 설계",
+            "메쉬 통기 구조",
+            "미끄럼 방지 밑창"
+        ],
+        "image": "/image/running1.png",
+        "detailDescription": "러너들을 위해 제작된 이 러닝화는 가벼운 무게와 탁월한 쿠셔닝으로 장거리 달리기에 최적입니다. 땀이 차지 않는 메쉬 디자인으로 여름에도 쾌적하게 착용할 수 있습니다.",
+        "promotion": "매일이 새로운 기록! 당신의 러닝 파트너, 에어플로우 지금 바로 만나보세요!"
+    }
+]
