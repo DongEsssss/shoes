@@ -1,4 +1,13 @@
-import { Dialog, DialogTitle, DialogContent, Typography, IconButton } from '@mui/material';
+import {
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    Typography,
+    IconButton,
+    Box,
+    Chip,
+    Divider
+} from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import { useEffect, useState } from 'react';
 
@@ -8,7 +17,7 @@ export interface SimpleDialogProps {
     noticeId: number;
 }
 
-export default function NoitceDialog(props: SimpleDialogProps) {
+export default function NoticeDialog(props: SimpleDialogProps) {
     const { onClose, open, noticeId } = props;
     const [noticeData, setNoticeData] = useState<{
         id: string;
@@ -23,8 +32,7 @@ export default function NoitceDialog(props: SimpleDialogProps) {
     } | null>(null);
 
     useEffect(() => {
-        // JSON 데이터 가져오기
-        fetch('/asset/data/notice.json') // 경로 수정
+        fetch('/asset/data/notice.json')
             .then((response) => response.json())
             .then((data) => {
                 const notice = data.find((item: { id: number }) => item.id === noticeId);
@@ -37,20 +45,38 @@ export default function NoitceDialog(props: SimpleDialogProps) {
         onClose(String(noticeId));
     };
 
-    if (!noticeData) {
-        return null; // 데이터가 로드되지 않았을 때
-    }
+    if (!noticeData) return null;
 
     return (
-        <Dialog onClose={handleClose} open={open}>
-            <DialogTitle
-                sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>{noticeData.title}
-                <IconButton>
-                    <ClearIcon onClick={handleClose} />
-                </IconButton>
-            </DialogTitle>
-            <DialogContent sx={{ pt: 0 }}>
-                <Typography>
+        <Dialog onClose={handleClose} open={open} maxWidth="sm" fullWidth>
+            <Box sx={{ p: 2, pb: 0 }}>
+                <Box display="flex" justifyContent="space-between" alignItems="center">
+                    <Box>
+                        <Typography variant="h6" fontWeight={700} mt={1} display={'flex'} alignItems={'center'} gap={1}>
+                            <Chip label={noticeData.category} color="primary" size="small" />
+                            {noticeData.title}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                            등록일: {new Date(noticeData.createdAt).toLocaleDateString()}
+                        </Typography>
+                    </Box>
+                    <IconButton onClick={handleClose}>
+                        <ClearIcon />
+                    </IconButton>
+                </Box>
+                <Divider sx={{ mt: 2 }} />
+            </Box>
+
+            <DialogContent sx={{ pt: 2 }}>
+                {noticeData.image && (
+                    <Box
+                        component="img"
+                        src={noticeData.image}
+                        alt="공지 이미지"
+                        sx={{ width: '100%', borderRadius: 2, mb: 2 }}
+                    />
+                )}
+                <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
                     {noticeData.content}
                 </Typography>
             </DialogContent>
