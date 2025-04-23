@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 interface headerProps {
     title: string;
@@ -8,13 +8,13 @@ interface headerProps {
 export default function MainHeader(props: headerProps) {
     const { title, subTitle } = props;
     return (
-        <div>
-            <Typography fontSize={30} fontWeight={700} color="#000" textAlign="left" marginTop={1} marginBottom={1}>
+        <Box marginBottom={1} >
+            <Typography fontSize={30} fontWeight={700} color="#000" textAlign="left" marginTop={1} marginBottom={1} whiteSpace={'pre-line'}>
                 {title}
-                <Typography fontSize={16} color="#666" marginTop={0}>
-                    {subTitle}
-                </Typography>
             </Typography>
-        </div>
+            <Typography fontSize={16} color="#666" component={'span'}>
+                {subTitle}
+            </Typography>
+        </Box>
     )
 }
