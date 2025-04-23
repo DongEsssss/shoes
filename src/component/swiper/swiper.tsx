@@ -14,10 +14,8 @@ import './mainslider.scss';
 export default function SwiperComponent() {
     return (
         <div className="main-slider-wrapper">
-            {/* 커스텀 버튼 */}
             <div className="main-slider-nav prev">‹</div>
             <div className="main-slider-nav next">›</div>
-
             <Swiper
                 modules={[Autoplay, Navigation]}
                 spaceBetween={0}

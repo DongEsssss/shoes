@@ -1,7 +1,6 @@
-import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
-
-import './pageup.scss';
 import { useEffect, useState } from 'react';
+import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
+import './pageup.scss';
 
 export default function Pageup() {
     const [showButton, setShowButton] = useState(false);

@@ -8,8 +8,8 @@ import 'swiper/css/navigation';
 
 import category from '../../../../asset/data/category.json';
 
-import './category.scss';
 import CustomNavigation from 'component/swiper/CustomNavigation';
+import './category.scss';
 
 export interface CategoryType {
     key: number;
@@ -17,14 +17,23 @@ export interface CategoryType {
     link: string;
     image: string;
 }
-
+const cardStyle = {
+    backgroundColor: '#f9f9f9',
+    borderRadius: '12px',
+    p: 2,
+    cursor: 'pointer',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '70px',
+};
 export default function Category() {
     const navigate = useNavigate();
 
     return (
         <main className="category-main-section" style={{ position: 'relative' }}>
             <CustomNavigation uniqueClass="category" />
-
             <Swiper
                 modules={[Navigation]}
                 navigation={{
@@ -46,17 +55,7 @@ export default function Category() {
                     <SwiperSlide key={item.key}>
                         <Box
                             onClick={() => navigate(item.link)}
-                            sx={{
-                                backgroundColor: '#f9f9f9',
-                                borderRadius: '12px',
-                                p: 2,
-                                cursor: 'pointer',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                height: '70px',
-                            }}
+                            sx={cardStyle}
                         >
                             <div className="icon">
                                 <img

@@ -2,43 +2,40 @@ import React, { useEffect } from "react";
 
 import Mainslider from './mainslider';
 import Company from './section/company/company';
-import Caterogy from './section/category';
-// import MonthNewItem from './section/monthnewitem';
+import Category from './section/category';
+import MonthNewItem from './section/monthnewitem';
 import MonthBestItem from './section/monthbest';
 import LimitedEdition from "./section/limitedition";
+import Specialplus from "./section/plus";
+
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AosWrapper from "component/Aos";
 
 export default function Home() {
-
     useEffect(() => {
         AOS.init();
-    }, [])
+    }, []);
 
     return (
         <>
             <Mainslider />
-            <div data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom">
-                <Caterogy />
-            </div>
-            <div data-aos="fade-left"
-                data-aos-anchor-placement="top-bottom"
-                data-aos-offset="200"
-            >
+            <AosWrapper>
+                <Category />
+            </AosWrapper>
+            <AosWrapper animation="fade-left">
                 <LimitedEdition />
-            </div>
-            <div data-aos="fade-right"
-                data-aos-anchor-placement="top-bottom"
-                data-aos-offset="200"
-            >
+            </AosWrapper>
+            <AosWrapper animation="fade-right">
                 <MonthBestItem />
-            </div>
-            {/* <div data-aos="fade-left"
-                data-aos-anchor-placement="center-center">
+            </AosWrapper>
+            <AosWrapper animation="fade-left">
                 <MonthNewItem />
-            </div> */}
+            </AosWrapper>
+            <AosWrapper animation="fade-right">
+                <Specialplus />
+            </AosWrapper>
             <Company />
         </>
     );

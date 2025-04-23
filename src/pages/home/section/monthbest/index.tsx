@@ -2,107 +2,72 @@ import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import 'swiper/css/navigation';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import './monthbest.scss';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-import { JSX } from 'react/jsx-runtime';
-
-interface HotItem {
-    id: string;
-    title: string;
-    content: string;
-    category: string;
-    image?: string;
-    set?: {
-        map(arg0: (item: any, idx: number) => JSX.Element): React.ReactNode;
-        name: string;
-        price: number;
-        category: string;
-        description: string;
-        productCode: string;
-        image: string;
-    }
-    createdAt: string;
-    updatedAt: string;
-    isPinned: boolean;
-    visible: boolean;
-    name?: string;
-    price?: number;
-    promotion?: string;
-    productCode?: string;
-}
+import MainHeader from 'component/mainHeader';
+import { HotItem } from 'asset/type/hot';
 
 export default function MonthBestItem() {
     const [hotitem, setHotItem] = useState<HotItem[]>([]);
 
     useEffect(() => {
         fetch('/asset/data/hotitem.json')
-            .then((response) => response.json())
-            .then((data: HotItem[]) => {
-                setHotItem(data);
-            })
-            .catch((error) => console.error('데이터 확인 요망 : ', error));
+            .then((res) => res.json())
+            .then(setHotItem)
+            .catch((err) => console.error('데이터 확인 요망 : ', err));
     }, []);
+
+    const swiperOptions = {
+        modules: [EffectCoverflow, Pagination],
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        coverflowEffect: {
+            rotate: 10,
+            stretch: 0,
+            depth: 50,
+            modifier: 1,
+            slideShadows: true,
+        },
+        loop: true,
+        pagination: { clickable: true },
+    };
 
     return (
         <main className="hot-item-section">
-            <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div>
-                    <Typography fontSize={30} fontWeight={700} color="#000" textAlign="left" marginTop={3} marginBottom={0}>
-                        This Month's Must-Haves
-                    </Typography>
-                    <Typography fontSize={16} color="#666" marginTop={0} marginBottom={2}>
-                        요즘 가장 핫한 조합을 소개합니다!
-                    </Typography>
-                </div>
-                <div className="hot-nav">
-                    <Button
-                        sx={{
-                            backgroundColor: '#000',
-                            color: '#fff',
-                            borderRadius: '8px',
-                            padding: '8px 16px',
-                            '&:hover': {
-                                backgroundColor: '#333',
-                            }
-                        }}>
-                        More +
-                    </Button>
-                </div>
+            <nav className="hot-header">
+                <MainHeader title="This Month's Must-Haves" subTitle="요즘 가장 핫한 조합을 소개합니다!" />
+                <Button
+                    sx={{
+                        bgcolor: '#000', color: '#fff', borderRadius: '8px', px: 2,
+                        '&:hover': { bgcolor: '#333' },
+                    }}
+                >
+                    More +
+                </Button>
             </nav>
 
-            <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={1.5}
-                coverflowEffect={{
-                    rotate: 10,
-                    stretch: 0,
-                    depth: 50,
-                    modifier: 1,
-                    slideShadows: true,
-                }}
-                loop={true}
-                pagination={{ clickable: true }}
-                modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
-            >
-                {hotitem.map((product: HotItem) => (
-                    <SwiperSlide key={product.id} className="swiper-slide">
+            <Swiper {...swiperOptions} className="mySwiper">
+                {hotitem.map(({ id, image, name, promotion, set }) => (
+                    <SwiperSlide key={id} className="swiper-slide">
                         <div className="hotitem-card">
                             <div className="hotitem-image-wrap">
-                                <img src={product.image} alt={product.name || ''} className="hotitem-image" />
+                                <img src={image} alt={name || ''} className="hotitem-image" />
                             </div>
+
                             <div className="hotitem-info">
-                                <div className="hotitem-promo">{product.promotion}</div>
-                                <Typography fontWeight={600} fontSize={18} marginBottom={1}>
+                                {promotion && <div className="hotitem-promo">{promotion}</div>}
+
+                                <Typography fontWeight={600} fontSize={18} mb={1}>
                                     세트 구성
                                 </Typography>
+
                                 <div className="hotitem-set">
-                                    {product.set && product.set.map((item: any, idx: number) => (
-                                        <div key={idx} className="hotitem-set-item">
+                                    {set?.map((item, i) => (
+                                        <div key={i} className="hotitem-set-item">
                                             <img src={item.image} alt={item.name} className="set-list-img" />
                                             <div className="set-item-desc">
                                                 <strong>{item.name}</strong><br />
@@ -111,15 +76,22 @@ export default function MonthBestItem() {
                                         </div>
                                     ))}
                                 </div>
+
                                 <div className="sellandetail">
-                                    <Button variant="contained" sx={{ backgroundColor: '#000', color: '#fff', borderRadius: '8px', width: '82px', height: '36px', }}>
+                                    <Button
+                                        variant="contained"
+                                        sx={{ bgcolor: '#000', color: '#fff', borderRadius: '8px', width: 82, height: 36 }}
+                                    >
                                         구매하기
                                     </Button>
-                                    <Button variant='outlined' sx={{
-                                        color: '#000', borderColor: '#000', borderRadius: '8px', padding: "6px 16px",
-                                        width: '82px', height: '36px',
-                                    }}>
-                                        <AddIcon sx={{ fontSize: '16px' }} />
+                                    <Button
+                                        variant="outlined"
+                                        sx={{
+                                            color: '#000', borderColor: '#000', borderRadius: '8px',
+                                            px: 2, width: 82, height: 36,
+                                        }}
+                                    >
+                                        <AddIcon fontSize="small" />
                                     </Button>
                                 </div>
                             </div>

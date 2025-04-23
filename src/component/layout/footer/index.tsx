@@ -1,16 +1,16 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
-import SmartToyIcon from '@mui/icons-material/SmartToy';
 
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 import { ReactComponent as KakaoIcon } from "../../../asset/svg/kakao.svg";
 import { ReactComponent as InstagramIcon } from "../../../asset/svg/instagram.svg";
 import { ReactComponent as YoutubeIcon } from "../../../asset/svg/youtube.svg";
 
 import noticeData from '../../../asset/data/notice.json';
+import NoitceDialog from "component/modal";
 
 import './footer.scss'
-import { useEffect, useState } from "react";
-import NoitceDialog from "component/modal";
-import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
     const links: string[] = noticeData.map((item) => item.title); // 공지사항 제목을 링크로 사용

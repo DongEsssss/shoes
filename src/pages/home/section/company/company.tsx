@@ -1,5 +1,5 @@
-import "./style.scss"
 import companydata from '../../../../asset/data/company.json';
+import "./style.scss"
 
 export default function Company() {
     const items = companydata.distributors

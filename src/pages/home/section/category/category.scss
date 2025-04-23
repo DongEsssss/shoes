@@ -7,12 +7,11 @@
         top: 0;
         bottom: 0;
         width: 60px;
-        background-color: white; // 버튼 배경 덮기용
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 5;
-
 
         &.left {
             left: 0;
@@ -36,20 +35,22 @@
             cursor: pointer;
             user-select: none;
             color: black;
+            transition: background-color 0.2s ease;
 
             &:hover {
                 background-color: #e0e0e0;
+                color: #fff;
             }
         }
 
+        // 중복되는 swiper button 스타일을 합침
         .swiper-button-prev,
         .swiper-button-next {
             color: black;
-        }
 
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            color: #e3e3e3;
+            &:hover {
+                color: #e3e3e3;
+            }
         }
     }
 }

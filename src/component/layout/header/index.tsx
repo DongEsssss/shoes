@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useRef, useState } from 'react';
 import { Box, IconButton, InputAdornment, TextField, Typography } from '@mui/material';
 
@@ -5,7 +6,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import './header.scss';
-import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
     const [searchField, setSearchField] = useState(false);
