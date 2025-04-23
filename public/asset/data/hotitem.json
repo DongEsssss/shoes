@@ -95,21 +95,24 @@
                 "productCode": "볼001",
                 "category": "스포츠용품",
                 "description": "공식 규격의 내구성 강한 축구공입니다.",
-                "price": 40000
+                "price": 40000,
+                "image": "/model/축구공.jpg"
             },
             {
                 "name": "축구 스타킹",
                 "productCode": "양말002",
                 "category": "스포츠웨어",
                 "description": "탄력과 통기성이 우수한 축구 전용 스타킹입니다.",
-                "price": 15000
+                "price": 15000,
+                "image": "/model/축구양말.jpg"
             },
             {
                 "name": "슈즈백",
                 "productCode": "가방003",
                 "category": "가방",
                 "description": "축구화를 안전하게 보관할 수 있는 방수 슈즈백입니다.",
-                "price": 18000
+                "price": 18000,
+                "image": "/model/슈즈백.jpg"
             }
         ],
         "features": [
@@ -117,7 +120,7 @@
             "발목 지지 설계",
             "강력한 접지력"
         ],
-        "image": "/image/soccer1.png",
+        "image": "/model/축구화모델.png",
         "detailDescription": "고성능 경기용 축구화로, 빠른 움직임과 강한 슛에 최적화된 디자인입니다. 발목을 안정적으로 고정시켜 부상 위험을 줄여줍니다.",
         "promotion": "지금 바로 필드 위 주인공이 되어보세요! 성능과 스타일을 모두 잡은 축구화 한정판매!"
     },
