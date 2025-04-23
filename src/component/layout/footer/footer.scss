@@ -121,6 +121,10 @@
     @media screen and (max-Width:950px) {
         .footer-top-slogan {
             display: grid !important;
+
+            .notice {
+                justify-content: flex-start !important;
+            }
         }
 
         .footer-middle {
