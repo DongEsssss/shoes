@@ -15,9 +15,15 @@ body {
 main {
     max-width: 1200px;
     margin: auto;
-    padding: 20px 0px;
+    padding: 20px;
 }
 
+/* swiper */
+.swiper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
 
 @media screen and (max-width: 1200px) {
     main {
