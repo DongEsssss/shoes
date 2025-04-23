@@ -38,7 +38,7 @@ export default function MonthBestItem() {
 
     return (
         <main className="hot-item-section">
-            <nav className="hot-header">
+            <nav className="hot-nav">
                 <MainHeader title="This Month's Must-Haves" subTitle="요즘 가장 핫한 조합을 소개합니다!" />
                 <Button
                     sx={{

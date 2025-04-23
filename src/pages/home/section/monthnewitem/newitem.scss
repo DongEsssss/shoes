@@ -1,14 +1,9 @@
 .new-edition-section {
-    .swiper {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 30px;
-    }
-
     .new-nav {
         display: flex;
         align-items: center;
         gap: 20px;
+        justify-content: space-between;
 
         .new-nav-wrapper {
             background-color: #e9e9e9;
