@@ -1,0 +1,67 @@
+[
+    {
+        "id": "spring01",
+        "name": "블루밍 슬립온",
+        "category": "Spring Collection",
+        "image": "/image/블루밍슬립온.png",
+        "price": 79000,
+        "promotion": "가볍고 편안한 착화감, 봄 산책의 시작",
+        "productCode": "SP202501",
+        "createdAt": "2025-04-01T10:00:00Z",
+        "updatedAt": "2025-04-01T10:00:00Z",
+        "isPinned": false,
+        "visible": true
+    },
+    {
+        "id": "spring02",
+        "name": "라일락 워킹화",
+        "category": "Spring Collection",
+        "image": "/image/라일락워킹슈즈.png",
+        "price": 92000,
+        "promotion": "라일락 향기처럼 산뜻한 걸음",
+        "productCode": "SP202502",
+        "createdAt": "2025-04-02T09:30:00Z",
+        "updatedAt": "2025-04-02T09:30:00Z",
+        "isPinned": false,
+        "visible": true
+    },
+    {
+        "id": "spring03",
+        "name": "에어리 러너",
+        "category": "Spring Collection",
+        "image": "/image/에어리러너.png",
+        "price": 99000,
+        "promotion": "공기처럼 가벼운 러닝화, 일상 속 자유",
+        "productCode": "SP202503",
+        "createdAt": "2025-04-03T14:20:00Z",
+        "updatedAt": "2025-04-03T14:20:00Z",
+        "isPinned": false,
+        "visible": true
+    },
+    {
+        "id": "spring04",
+        "name": "민트 플로우",
+        "category": "Spring Collection",
+        "image": "/image/민트플로우.png",
+        "price": 86000,
+        "promotion": "민트 컬러처럼 상쾌한 하루를 시작하세요",
+        "productCode": "SP202504",
+        "createdAt": "2025-04-04T11:00:00Z",
+        "updatedAt": "2025-04-04T11:00:00Z",
+        "isPinned": false,
+        "visible": true
+    },
+    {
+        "id": "spring05",
+        "name": "코튼 캔버스 스니커즈",
+        "category": "Spring Collection",
+        "image": "/image/코튼캔버스스니커즈.png",
+        "price": 73000,
+        "promotion": "내추럴한 캔버스에 담은 봄의 여유",
+        "productCode": "SP202505",
+        "createdAt": "2025-04-05T13:15:00Z",
+        "updatedAt": "2025-04-05T13:15:00Z",
+        "isPinned": false,
+        "visible": true
+    }
+]
