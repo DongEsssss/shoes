@@ -29,3 +29,9 @@ main {
         padding: 20px 10px;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .homeNav {
+        display: none !important;
+    }
+}
