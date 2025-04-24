@@ -13,6 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import AosWrapper from "component/Aos";
 import HomeNavBar from "./section/homeNav";
+import Sale from "./section/sale";
 
 export default function Home() {
     useEffect(() => {
@@ -38,6 +39,10 @@ export default function Home() {
             <AosWrapper animation="fade-right">
                 <Specialplus />
             </AosWrapper>
+            <AosWrapper animation="fade-up">
+                <Sale />
+            </AosWrapper>
+
             <Company />
         </>
     );

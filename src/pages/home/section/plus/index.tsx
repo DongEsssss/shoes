@@ -30,7 +30,7 @@ export default function Specialplus() {
         spaceBetween: 30,
         slidesPerView: 2,
         breakpoints: {
-            600: {
+            800: {
                 slidesPerView: 2,
             },
             0: {
