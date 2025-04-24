@@ -20,7 +20,7 @@ export default function MonthBestItem() {
     }, []);
 
     const swiperOptions = {
-        modules: [EffectCoverflow, Pagination],
+        modules: [EffectCoverflow],
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
@@ -33,7 +33,6 @@ export default function MonthBestItem() {
             slideShadows: true,
         },
         loop: true,
-        pagination: { clickable: true },
     };
 
     return (

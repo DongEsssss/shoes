@@ -24,6 +24,7 @@ export default function Specialplus() {
             .then(setPlusItem)
             .catch((err) => console.error('데이터 확인 요망 : ', err));
     }, []);
+
     const pluswiperoption = {
         modules: [Navigation],
         spaceBetween: 30,

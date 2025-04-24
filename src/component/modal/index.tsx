@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import { useEffect, useState } from 'react';
+import { noitce } from 'asset/type/notice';
 
 export interface SimpleDialogProps {
     open: boolean;
@@ -19,24 +20,14 @@ export interface SimpleDialogProps {
 
 export default function NoticeDialog(props: SimpleDialogProps) {
     const { onClose, open, noticeId } = props;
-    const [noticeData, setNoticeData] = useState<{
-        id: string;
-        title: string;
-        content: string;
-        category: string;
-        image?: string;
-        createdAt: string;
-        updatedAt: string;
-        isPinned: boolean;
-        visible: boolean;
-    } | null>(null);
+    const [noticeData, setNoticeData] = useState<noitce>();
 
     useEffect(() => {
         fetch('/asset/data/notice.json')
             .then((response) => response.json())
             .then((data) => {
                 const notice = data.find((item: { id: number }) => item.id === noticeId);
-                setNoticeData(notice || null);
+                setNoticeData(notice);
             })
             .catch((error) => console.error('Error loading notice data:', error));
     }, [noticeId]);
@@ -45,27 +36,31 @@ export default function NoticeDialog(props: SimpleDialogProps) {
         onClose(String(noticeId));
     };
 
-    if (!noticeData) return null;
+    if (!noticeData) return (
+        <Dialog onClose={handleClose} open={open} maxWidth="sm" fullWidth>
+            <DialogTitle>Loading...</DialogTitle>
+        </Dialog>
+    );
 
     return (
         <Dialog onClose={handleClose} open={open} maxWidth="sm" fullWidth>
-            <Box sx={{ p: 2, pb: 0 }}>
+            <DialogTitle sx={{ p: 2, pb: 0 }}>
                 <Box display="flex" justifyContent="space-between" alignItems="center">
                     <Box>
                         <Typography variant="h6" fontWeight={700} mt={1} display={'flex'} alignItems={'center'} gap={1}>
                             <Chip label={noticeData.category} color="primary" size="small" />
                             {noticeData.title}
                         </Typography>
-                        <Typography variant="caption" color="text.secondary">
-                            등록일: {new Date(noticeData.createdAt).toLocaleDateString()}
-                        </Typography>
                     </Box>
                     <IconButton onClick={handleClose}>
                         <ClearIcon />
                     </IconButton>
                 </Box>
+                <Typography variant="caption" color="text.secondary">
+                    등록일: {new Date(noticeData.createdAt).toLocaleDateString()}
+                </Typography>
                 <Divider sx={{ mt: 2 }} />
-            </Box>
+            </DialogTitle>
 
             <DialogContent sx={{ pt: 2 }}>
                 {noticeData.image && (
