@@ -59,7 +59,7 @@ export default function NoticeDialog(props: SimpleDialogProps) {
                 <Typography variant="caption" color="text.secondary">
                     등록일: {new Date(noticeData.createdAt).toLocaleDateString()}
                 </Typography>
-                <Divider sx={{ mt: 2 }} />
+                <Divider sx={{ marginBottom: 1 }} />
             </DialogTitle>
 
             <DialogContent sx={{ pt: 2 }}>
