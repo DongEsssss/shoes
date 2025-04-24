@@ -52,21 +52,75 @@ export default function Sale() {
                 {...saleoption}>
                 {saleitem?.map((item: any) => (
                     <SwiperSlide key={item.productCode}>
-                        <Card sx={{ borderRadius: '16px', overflow: 'hidden', boxShadow: 3 }}>
+                        <Card
+                            sx={{
+                                borderRadius: '16px',
+                                overflow: 'hidden',
+                                boxShadow: 5,
+                                transition: 'transform 0.3s ease',
+                                '&:hover': {
+                                    transform: 'scale(1.03)',
+                                },
+                                position: 'relative',
+                                backgroundColor: '#fff5f5',
+                            }}
+                        >
+                            {/* 🔥 Hot 배지 */}
+                            <div style={{
+                                position: 'absolute',
+                                top: 8,
+                                left: 8,
+                                backgroundColor: '#ff3b3b',
+                                color: '#fff',
+                                padding: '4px 8px',
+                                borderRadius: 4,
+                                fontWeight: 'bold',
+                                fontSize: '12px',
+                                zIndex: 1
+                            }}>
+                                HOT
+                            </div>
+
                             <CardMedia
                                 component="img"
                                 image={item.image}
                                 alt={item.name}
-                                sx={{ height: 200, objectFit: 'cover' }}
+                                sx={{
+                                    height: 200,
+                                    objectFit: 'cover',
+                                    borderBottom: '4px solid #ff6f61',
+                                }}
                             />
+
                             <CardContent>
-                                <CountdownTimer endTime={item.saleEndTime} />
-                                <Typography variant="h6">{item.name}</Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                {/* ⏳ 카운트다운 타이머 강조 */}
+                                <div style={{
+                                    backgroundColor: '#ffffff',
+                                    color: '#fff',
+                                    padding: '4px 8px',
+                                    borderRadius: 6,
+                                    display: 'inline-block',
+                                    marginBottom: '8px',
+                                    fontWeight: 'bold',
+                                    fontSize: '0.875rem'
+                                }}>
+                                    <CountdownTimer endTime={item.saleEndTime} />
+                                </div>
+
+                                <Typography variant="h6" fontWeight="bold" sx={{ mb: 0.5 }}>
+                                    {item.name}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                                     {item.promotion}
+                                </Typography>
+
+                                {/* 💰 가격 강조 */}
+                                <Typography variant="h6" color="error" fontWeight="bold">
+                                    {item.price.toLocaleString()}원
                                 </Typography>
                             </CardContent>
                         </Card>
+
                     </SwiperSlide>
                 ))}
 

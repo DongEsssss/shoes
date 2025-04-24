@@ -4,7 +4,7 @@ body {
     padding: 0;
     height: 100vh;
     word-break: keep-all;
-    min-width: 500px
+    min-width: 500px;
 }
 
 #root {

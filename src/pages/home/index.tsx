@@ -21,7 +21,7 @@ export default function Home() {
     }, []);
 
     return (
-        <>
+        <div style={{ overflowX: 'hidden' }}>
             <Mainslider />
             <HomeNavBar />
             <AosWrapper>
@@ -44,6 +44,6 @@ export default function Home() {
             </AosWrapper>
 
             <Company />
-        </>
+        </div>
     );
 }
