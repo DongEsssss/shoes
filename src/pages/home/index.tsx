@@ -12,6 +12,7 @@ import Specialplus from "./section/plus";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AosWrapper from "component/Aos";
+import HomeNavBar from "./section/homeNav";
 
 export default function Home() {
     useEffect(() => {
@@ -21,6 +22,7 @@ export default function Home() {
     return (
         <>
             <Mainslider />
+            <HomeNavBar />
             <AosWrapper>
                 <Category />
             </AosWrapper>
