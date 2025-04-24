@@ -11,6 +11,8 @@ header {
 
         .header-tool {
             text-align: right;
+            display: flex;
+            align-items: center;
 
             .MuiOutlinedInput-root {
                 padding: 0px;
