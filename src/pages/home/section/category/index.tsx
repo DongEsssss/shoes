@@ -43,9 +43,9 @@ export default function Category() {
                 loop={true}
                 spaceBetween={20}
                 breakpoints={{
-                    320: { slidesPerView: 3 },
-                    480: { slidesPerView: 4 },
-                    768: { slidesPerView: 5 },
+                    320: { slidesPerView: 2 },
+                    580: { slidesPerView: 3 },
+                    768: { slidesPerView: 4 },
                     1024: { slidesPerView: 5 },
                     1280: { slidesPerView: 6 },
                 }}

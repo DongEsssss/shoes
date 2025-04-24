@@ -26,7 +26,7 @@ export default function MonthBestItem() {
         centeredSlides: true,
         slidesPerView: 1.5,
         coverflowEffect: {
-            rotate: 10,
+            rotate: 50,
             stretch: 0,
             depth: 50,
             modifier: 1,
@@ -37,18 +37,20 @@ export default function MonthBestItem() {
     };
 
     return (
-        <main className="hot-item-section">
-            <nav className="hot-nav">
-                <MainHeader title="This Month's Must-Haves" subTitle="요즘 가장 핫한 조합을 소개합니다!" />
-                <Button
-                    sx={{
-                        bgcolor: '#000', color: '#fff', borderRadius: '8px', px: 2,
-                        '&:hover': { bgcolor: '#333' },
-                    }}
-                >
-                    More +
-                </Button>
-            </nav>
+        <div className="hot-item-section">
+            <main>
+                <nav className="hot-nav">
+                    <MainHeader title="This Month's Must-Haves" subTitle="요즘 가장 핫한 조합을 소개합니다!" />
+                    <Button
+                        sx={{
+                            bgcolor: '#000', color: '#fff', borderRadius: '8px', px: 2,
+                            '&:hover': { bgcolor: '#333' },
+                        }}
+                    >
+                        More +
+                    </Button>
+                </nav>
+            </main>
 
             <Swiper {...swiperOptions} className="mySwiper">
                 {hotitem.map(({ id, image, name, promotion, set }) => (
@@ -99,6 +101,6 @@ export default function MonthBestItem() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </main>
+        </div>
     );
 }
