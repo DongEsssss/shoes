@@ -10,25 +10,30 @@ import shoes3 from '../../asset/image/shose3.png';
 import shoes4 from '../../asset/image/shose4.png';
 
 import './mainslider.scss';
+import CustomNavigation from './CustomNavigation';
 
 export default function SwiperComponent() {
+
+    const swiperOptions = {
+        modules: [Navigation, Autoplay],
+        spaceBetween: 0,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.main-slider-nav.next',
+            prevEl: '.main-slider-nav.prev',
+        },
+    };
+
     return (
         <div className="main-slider-wrapper">
-            <div className="main-slider-nav prev">‹</div>
-            <div className="main-slider-nav next">›</div>
+            <CustomNavigation uniqueClass="main" />
             <Swiper
-                modules={[Autoplay, Navigation]}
-                spaceBetween={0}
-                slidesPerView={1}
-                loop={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                navigation={{
-                    prevEl: '.main-slider-nav.prev',
-                    nextEl: '.main-slider-nav.next',
-                }}
+                {...swiperOptions}
                 className="main-swiper"
             >
                 {[shoes1, shoes2, shoes3, shoes4].map((src, index) => (
