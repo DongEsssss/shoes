@@ -8,6 +8,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { SaleItem } from 'asset/type/sale';
 import CountdownTimer from 'component/Timer';
+import Mainnavigation from 'component/swiper/main-navigation';
+import ArrowLink from 'component/ArrowLink';
 
 // import './sale.scss';
 
@@ -28,7 +30,7 @@ export default function Sale() {
             1200: {
                 slidesPerView: 3,
             },
-            600: {
+            741: {
                 slidesPerView: 2,
             },
             0: {
@@ -46,8 +48,13 @@ export default function Sale() {
     }
 
     return (
-        <main>
-            <MainHeader title={'April’s Must-Haves, Now on Sale'} subTitle={'살랑살랑 봄바람, 착한 가격까지'} />
+        <main className="sale-edition-section">
+            <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <MainHeader
+                    title={'April’s Must-Haves, Now on Sale'}
+                    subTitle={'살랑살랑 봄바람, 착한 가격까지'} />
+                <Mainnavigation classPrefix={'sale'} />
+            </nav>
             <Swiper
                 {...saleoption}>
                 {saleitem?.map((item: any) => (
@@ -65,7 +72,6 @@ export default function Sale() {
                                 backgroundColor: '#fff5f5',
                             }}
                         >
-                            {/* 🔥 Hot 배지 */}
                             <div style={{
                                 position: 'absolute',
                                 top: 8,
@@ -80,7 +86,6 @@ export default function Sale() {
                             }}>
                                 HOT
                             </div>
-
                             <CardMedia
                                 component="img"
                                 image={item.image}
@@ -93,11 +98,9 @@ export default function Sale() {
                             />
 
                             <CardContent>
-                                {/* ⏳ 카운트다운 타이머 강조 */}
                                 <div style={{
                                     backgroundColor: '#ffffff',
                                     color: '#fff',
-                                    padding: '4px 8px',
                                     borderRadius: 6,
                                     display: 'inline-block',
                                     marginBottom: '8px',
@@ -114,16 +117,14 @@ export default function Sale() {
                                     {item.promotion}
                                 </Typography>
 
-                                {/* 💰 가격 강조 */}
                                 <Typography variant="h6" color="error" fontWeight="bold">
                                     {item.price.toLocaleString()}원
                                 </Typography>
                             </CardContent>
                         </Card>
-
                     </SwiperSlide>
                 ))}
-
+                <ArrowLink classPrefix="sale" />
             </Swiper>
         </main>
     )

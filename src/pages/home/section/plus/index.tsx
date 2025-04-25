@@ -14,6 +14,8 @@ import { Navigation } from "swiper/modules";
 
 import MainHeader from 'component/mainHeader'
 import { SpringItem } from "asset/type/plus";
+import Mainnavigation from "component/swiper/main-navigation";
+import ArrowLink from "component/ArrowLink";
 
 export default function Specialplus() {
     const [plusitem, setPlusItem] = useState<SpringItem[]>([]);
@@ -47,11 +49,12 @@ export default function Specialplus() {
         },
     }
     return (
-        <main>
+        <main className="plus-edition-section">
             <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <MainHeader
                     title={'Light Steps, New Season'}
                     subTitle={'가볍게, 산뜻하게. 봄 신상과 함께하는 특별한 하루.'} />
+                <Mainnavigation classPrefix={'plus'} />
             </nav>
             <Swiper
                 {...pluswiperoption}
@@ -79,6 +82,7 @@ export default function Specialplus() {
                         </Card>
                     </SwiperSlide>
                 ))}
+                <ArrowLink classPrefix="plus" />
             </Swiper>
         </main>
     )

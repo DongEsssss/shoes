@@ -6,7 +6,7 @@ export default function Company() {
     return (
         <div className="carousel-wrapper">
             <div className="carousel-track">
-                {items.concat(items).map((item, i) => (
+                {items.concat(items).map((item: any, i: number) => (
                     <div key={i} className="carousel-slide">
                         <img src={item.logo} alt={item.name} style={{ width: '150px' }} />
                     </div>

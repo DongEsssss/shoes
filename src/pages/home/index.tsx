@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 
-import Mainslider from './mainslider';
+import Mainslider from "./section/slider/mainslider";
 import Company from './section/company/company';
 import Category from './section/category';
 import MonthNewItem from './section/monthnewitem';
 import MonthBestItem from './section/monthbest';
 import LimitedEdition from "./section/limitedition";
 import Specialplus from "./section/plus";
-
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,7 +26,9 @@ export default function Home() {
             <AosWrapper>
                 <Category />
             </AosWrapper>
-            <AosWrapper animation="fade-left">
+            <AosWrapper
+                animation="fade-left"
+                anchor="top-bottom">
                 <LimitedEdition />
             </AosWrapper>
             <AosWrapper animation="fade-right">

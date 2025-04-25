@@ -3,11 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import './limited.scss';
 import MainHeader from 'component/mainHeader';
 import EditionCard from 'component/SwiperSlideCard';
 import CustomNavigation from 'component/swiper/CustomNavigation';
 import { LimitedItem } from 'asset/type/limited';
+import Mainnavigation from 'component/swiper/main-navigation';
+import ArrowLink from 'component/ArrowLink';
 
 
 export default function SliderComponent() {
@@ -39,8 +40,8 @@ export default function SliderComponent() {
         },
         loop: true,
         navigation: {
-            nextEl: '.new-swiper-button-next',
-            prevEl: '.new-swiper-button-prev',
+            nextEl: '.limited-swiper-button-next',
+            prevEl: '.limited-swiper-button-prev',
         },
         pagination: {
             clickable: true,
@@ -49,9 +50,9 @@ export default function SliderComponent() {
 
     return (
         <main className="limited-edition-section">
-            <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'self-end' }}>
                 <MainHeader title={'Limited Edition Promotion'} subTitle={'지금 가장 주목받는 한정판 컬렉션!'} />
-                <CustomNavigation uniqueClass="limited" />
+                <Mainnavigation classPrefix={'limited'} />
             </nav>
             <Swiper {...limitedItemSwiperOptions} >
                 {limitedEdition.map((item) => (
@@ -63,6 +64,7 @@ export default function SliderComponent() {
                         />
                     </SwiperSlide>
                 ))}
+                <ArrowLink classPrefix='limited' />
             </Swiper>
         </main>
     );

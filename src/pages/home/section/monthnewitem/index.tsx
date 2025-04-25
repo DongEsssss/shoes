@@ -6,7 +6,8 @@ import { Navigation } from 'swiper/modules';
 import './newitem.scss';
 import EditionCard from 'component/SwiperSlideCard';
 import MainHeader from 'component/mainHeader';
-import CustomNavigation from 'component/swiper/CustomNavigation';
+import ArrowLink from 'component/ArrowLink';
+import Mainnavigation from 'component/swiper/main-navigation';
 
 interface newItem {
     id: string;
@@ -65,7 +66,7 @@ const MonthNewItem = () => {
         <main className="new-edition-section">
             <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <MainHeader title={'Editor’s New Finds'} subTitle={'에디터의 레이더에 포착된 이번 달의 신상템.'} />
-                <CustomNavigation uniqueClass="new" />
+                <Mainnavigation classPrefix={'new'} />
             </nav>
             <Swiper
                 {...newItemSwiperOptions}
@@ -79,6 +80,7 @@ const MonthNewItem = () => {
                         />
                     </SwiperSlide>
                 ))}
+                <ArrowLink classPrefix='new' />
             </Swiper>
         </main>
     );
