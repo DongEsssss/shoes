@@ -2,6 +2,7 @@ import { Card, CardMedia, CardContent, Typography } from '@mui/material';
 import { SpringItem } from 'asset/type/plus';
 import MainHeader from 'component/mainHeader'
 import React, { useEffect, useState } from 'react'
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -24,6 +25,7 @@ export default function Sale() {
     }, []);
 
     const saleoption = {
+        modules: [Navigation],
         spaceBetween: 30,
         slidesPerView: 2,
         breakpoints: {
@@ -39,8 +41,8 @@ export default function Sale() {
         },
         loop: true,
         navigation: {
-            nextEl: '.sale-swiper-button-next',
-            prevEl: '.sale-swiper-button-prev',
+            nextEl: `.sale-swiper-button-next`,
+            prevEl: `.sale-swiper-button-prev`,
         },
         pagination: {
             clickable: true,

@@ -5,6 +5,7 @@ import AddIcon from '@mui/icons-material/Add';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './monthbest.scss';
+import { Navigation } from 'swiper/modules';
 import { EffectCoverflow } from 'swiper/modules';
 import MainHeader from 'component/mainHeader';
 import { HotItem } from 'asset/type/hot';
@@ -22,7 +23,7 @@ export default function MonthBestItem() {
     }, []);
 
     const swiperOptions = {
-        modules: [EffectCoverflow],
+        modules: [EffectCoverflow, Navigation],
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
