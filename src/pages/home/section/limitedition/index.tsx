@@ -8,10 +8,26 @@ import EditionCard from 'component/SwiperSlideCard';
 import { LimitedItem } from 'asset/type/limited';
 import Mainnavigation from 'component/swiper/main-navigation';
 import ArrowLink from 'component/ArrowLink';
+import ClearIcon from '@mui/icons-material/Clear';
+import { Dialog, DialogTitle, DialogContent, Typography, IconButton } from '@mui/material';
+import EditionDialog from 'component/EditionDialog';
 
 
 export default function SliderComponent() {
     const [limitedEdition, setLimitedEdition] = useState<LimitedItem[]>([]);
+
+    const [selectedItem, setSelectedItem] = useState<LimitedItem | null>(null);
+    const [open, setOpen] = useState(false);
+
+    const handleCardClick = (item: LimitedItem) => {
+        setSelectedItem(item);
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+        setSelectedItem(null);
+    };
 
     useEffect(() => {
         fetch('/asset/data/limitedEdtion.json')
@@ -48,23 +64,27 @@ export default function SliderComponent() {
     };
 
     return (
-        <main className="limited-edition-section">
-            <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'self-end' }}>
-                <MainHeader title={'Limited Edition Promotion'} subTitle={'지금 가장 주목받는 한정판 컬렉션!'} />
-                <Mainnavigation classPrefix={'limited'} />
-            </nav>
-            <Swiper {...limitedItemSwiperOptions} >
-                {limitedEdition.map((item) => (
-                    <SwiperSlide key={item.productCode || item.id}>
-                        <EditionCard
-                            item={item}
-                            onCardClick={(item: LimitedItem) => console.log('Clicked:', item.name)}
-                            sx={{ backgroundColor: '#f9f9f9' }}
-                        />
-                    </SwiperSlide>
-                ))}
-                <ArrowLink classPrefix='limited' />
-            </Swiper>
-        </main>
+        <>
+            <main className="limited-edition-section">
+                <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'self-end' }}>
+                    <MainHeader title={'Limited Edition Promotion'} subTitle={'지금 가장 주목받는 한정판 컬렉션!'} />
+                    <Mainnavigation classPrefix={'limited'} />
+                </nav>
+                <Swiper {...limitedItemSwiperOptions}>
+                    {limitedEdition.map((item) => (
+                        <SwiperSlide key={item.productCode || item.id}>
+                            <EditionCard
+                                item={item}
+                                onCardClick={handleCardClick}
+                                sx={{ backgroundColor: '#f9f9f9' }}
+                            />
+                        </SwiperSlide>
+                    ))}
+                    <ArrowLink classPrefix='limited' />
+                </Swiper>
+            </main>
+            <EditionDialog open={open} selectedItem={selectedItem} onClose={handleClose} />
+        </>
+
     );
 }
