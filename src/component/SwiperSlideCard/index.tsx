@@ -13,10 +13,16 @@ export default function EditionCard({ item, onCardClick }: EditionCardProps) {
     const handleCardClick = () => {
         navigate(`/product/${item.productCode}`);
     };
+
+    const handleIconButtonClick = (event: React.MouseEvent) => {
+        event.stopPropagation();  // Prevents the Box click handler from firing
+        onCardClick?.(item); // Triggers modal or other action
+    };
+
     return (
         <>
             <Box
-                onClick={() => handleCardClick()}
+                onClick={handleCardClick}
                 sx={{
                     backgroundColor: '#ffffff',
                     borderRadius: '16px',
@@ -37,7 +43,7 @@ export default function EditionCard({ item, onCardClick }: EditionCardProps) {
                 <Box sx={{ position: 'relative' }}>
                     {/* 플러스 버튼 */}
                     <IconButton
-                        onClick={() => onCardClick?.(item)}
+                        onClick={handleIconButtonClick}
                         sx={{
                             position: 'absolute',
                             top: 8,
