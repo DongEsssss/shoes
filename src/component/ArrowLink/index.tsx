@@ -1,6 +1,5 @@
-import { Button } from '@mui/material'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 interface ArrowLinkProps {
     classPrefix?: string;

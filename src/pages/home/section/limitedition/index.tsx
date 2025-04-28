@@ -5,7 +5,6 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import MainHeader from 'component/mainHeader';
 import EditionCard from 'component/SwiperSlideCard';
-import CustomNavigation from 'component/swiper/CustomNavigation';
 import { LimitedItem } from 'asset/type/limited';
 import Mainnavigation from 'component/swiper/main-navigation';
 import ArrowLink from 'component/ArrowLink';

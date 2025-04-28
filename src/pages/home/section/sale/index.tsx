@@ -1,5 +1,4 @@
 import { Card, CardMedia, CardContent, Typography } from '@mui/material';
-import { SpringItem } from 'asset/type/plus';
 import MainHeader from 'component/mainHeader'
 import React, { useEffect, useState } from 'react'
 import { Navigation } from 'swiper/modules';
@@ -11,8 +10,6 @@ import { SaleItem } from 'asset/type/sale';
 import CountdownTimer from 'component/Timer';
 import Mainnavigation from 'component/swiper/main-navigation';
 import ArrowLink from 'component/ArrowLink';
-
-// import './sale.scss';
 
 export default function Sale() {
     const [saleitem, setSaleItem] = useState<SaleItem[]>([]);
