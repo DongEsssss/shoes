@@ -12,6 +12,10 @@ interface LimitedItem {
     price: number;
     promotion: string;
     productCode: string;
+    detailDescription: string;
+    features: string[];
+    sizes: string[];
+
 }
 
 export type {
