@@ -1,14 +1,22 @@
-import { Box, Typography, BoxProps } from '@mui/material';
+import { Box, Typography, BoxProps, IconButton } from '@mui/material';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { useNavigate } from 'react-router-dom';
+
 interface EditionCardProps extends BoxProps {
     item: any;
     onCardClick?: (item: any) => void;
 }
 
 export default function EditionCard({ item, onCardClick }: EditionCardProps) {
+    const navigate = useNavigate();
+
+    const handleCardClick = () => {
+        navigate(`/product/${item.productCode}`);
+    };
     return (
         <>
             <Box
-                onClick={() => onCardClick?.(item)}
+                onClick={() => handleCardClick()}
                 sx={{
                     backgroundColor: '#ffffff',
                     borderRadius: '16px',
@@ -27,6 +35,22 @@ export default function EditionCard({ item, onCardClick }: EditionCardProps) {
                 }}
             >
                 <Box sx={{ position: 'relative' }}>
+                    {/* 플러스 버튼 */}
+                    <IconButton
+                        onClick={() => onCardClick?.(item)}
+                        sx={{
+                            position: 'absolute',
+                            top: 8,
+                            right: 8,
+                            backgroundColor: '#fff',
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+                            '&:hover': { backgroundColor: '#eee' }
+                        }}
+                    >
+                        <AddCircleOutlineIcon />
+                    </IconButton>
+
+                    {/* 카테고리 라벨 */}
                     <Box
                         sx={{
                             position: 'absolute',
