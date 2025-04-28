@@ -8,8 +8,6 @@ import EditionCard from 'component/SwiperSlideCard';
 import { LimitedItem } from 'asset/type/limited';
 import Mainnavigation from 'component/swiper/main-navigation';
 import ArrowLink from 'component/ArrowLink';
-import ClearIcon from '@mui/icons-material/Clear';
-import { Dialog, DialogTitle, DialogContent, Typography, IconButton } from '@mui/material';
 import EditionDialog from 'component/EditionDialog';
 
 

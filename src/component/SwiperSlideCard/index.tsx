@@ -1,6 +1,4 @@
 import { Box, Typography, BoxProps } from '@mui/material';
-import { useState } from 'react';
-
 interface EditionCardProps extends BoxProps {
     item: any;
     onCardClick?: (item: any) => void;
