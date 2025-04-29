@@ -75,7 +75,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             <button
-                                onClick={() => navigate("/notice")}
+                                onClick={() => navigate("/#")}
                                 style={{
                                     all: "unset",
                                     cursor: "pointer",
