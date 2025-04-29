@@ -18,7 +18,7 @@ export default function Header() {
     return (
         <header>
             <div className="header-bar">
-                <Typography variant='h5' onClick={() => navigate('/')}>Starlight Shoes</Typography>
+                <Typography variant='h5' onClick={() => navigate('/#')}>Starlight Shoes</Typography>
 
                 <div className="header-tool">
                     {!searchField ? (
@@ -72,7 +72,8 @@ export default function Header() {
                         <List>
                             {pages.map((page) => (
                                 <ListItem key={page} onClick={() => {
-                                    navigate(`/${page.toLowerCase()}`);
+                                    // navigate(`/${page.toLowerCase()}`);
+                                    navigate(`/#`);
                                     setDrawerOpen(false);
                                 }}>
                                     <ListItemText primary={page} />

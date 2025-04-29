@@ -54,7 +54,8 @@ export default function Category() {
                 {category.category.map((item: CategoryType) => (
                     <SwiperSlide key={item.key}>
                         <Box
-                            onClick={() => navigate(item.link)}
+                            // onClick={() => navigate(item.link)}
+                            onClick={() => navigate('/#')}
                             sx={cardStyle}
                         >
                             <div className="icon">

@@ -10,8 +10,12 @@ interface EditionCardProps extends BoxProps {
 export default function EditionCard({ item, onCardClick }: EditionCardProps) {
     const navigate = useNavigate();
 
+    // const handleCardClick = () => {
+    //     navigate(`/product/${item.productCode}`);
+    // };
+
     const handleCardClick = () => {
-        navigate(`/product/${item.productCode}`);
+        navigate(`/#`);
     };
 
     const handleIconButtonClick = (event: React.MouseEvent) => {
