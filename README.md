@@ -5,10 +5,10 @@ Nike, ABC Mart 등 다양한 실존 쇼핑몰의 UI/UX 요소를 벤치마킹하
 디자인과 코드 모두 처음부터 직접 설계하였으며, 작은 디테일까지 신경 써서 구성했습니다.
 
 >  ## 🎥 시연 영상
-[![Starlight SHOES 시연 영상](https://img.youtube.com/vi/y4ZW83wWuncf/0.jpg)](https://youtu.be/y4ZW83wWuncf)
+<p align="center">
+  <img src="./public/starlight-demo.gif" alt="Starlight SHOES Demo" width="600" />
+</p>
 
-
----
 
 ## 🛠️ 기술 스택
 
