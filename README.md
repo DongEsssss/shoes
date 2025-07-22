@@ -6,7 +6,7 @@ Nike, ABC Mart 등 다양한 실존 쇼핑몰의 UI/UX 요소를 벤치마킹하
 
 >  ## 🎥 시연 영상
 <p align="center">
-  <img src="./public/starlight-demo.gif" alt="Starlight SHOES Demo" width="600" />
+  <img src="./public/starlightshoes.gif" alt="Starlight SHOES Demo" width="600" />
 </p>
 
 
